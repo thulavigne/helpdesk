@@ -5,6 +5,6 @@ class TicketMailer < ActionMailer::Base
     @ticket = ticket
 
     @url  = 'http://example.com/login'
-    mail(to: ENV['GMAIL_USERNAME'], subject: "New Ticket: #{@ticket.title} ID: #{@ticket.id}")
+    mail(to: ENV['SENDGRID_USERNAME'], subject: "New Ticket: #{@ticket.title} ID: #{@ticket.id}")
   end
 end
