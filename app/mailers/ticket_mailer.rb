@@ -4,7 +4,6 @@ class TicketMailer < ActionMailer::Base
   def new_ticket_notification(ticket)
     @ticket = ticket
 
-    headers["ticket_id"] = @ticket.id
-    mail to: ENV['GMAIL_USERNAME'], subject: "New Ticket: #{@ticket.title} ID: #{@ticket.id}"
+    mail(to: ENV['GMAIL_USERNAME'], subject: "New Ticket: #{@ticket.title} ID: #{@ticket.id}")
   end
 end
