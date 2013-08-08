@@ -13,12 +13,18 @@
 
 ActiveRecord::Schema.define(:version => 20130808055008) do
 
+  create_table "replies", :force => true do |t|
+    t.string   "body"
+    t.integer  "ticket_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "tickets", :force => true do |t|
     t.string   "title"
     t.text     "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
-    t.text     "reply"
   end
 
 end
