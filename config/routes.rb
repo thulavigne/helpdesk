@@ -1,5 +1,6 @@
 Helpdesk::Application.routes.draw do
   resources :tickets
+  resources :incoming_mails
 
   root to: "tickets#index"
 
