@@ -4,7 +4,7 @@ Helpdesk::Application.routes.draw do
 
   root to: "tickets#index"
 
-    post '/replies' => 'replies#create'
+  post '/replies' => 'replies#create'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

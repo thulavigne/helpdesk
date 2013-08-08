@@ -5,4 +5,5 @@ class TicketMailer < ActionMailer::Base
     @ticket = ticket
     mail(to: ENV['AGENT_ADDRESS'], subject: "New Ticket: #{@ticket.title} ID: #{@ticket.id}")
   end
+
 end
