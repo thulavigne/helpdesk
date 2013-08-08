@@ -1,5 +1,5 @@
 class TicketMailer < ActionMailer::Base
-  default from: "f617e8347a855d547748@cloudmailin.net", reply_to: "f617e8347a855d547748@cloudmailin.net"
+  default from: "f617e8347a855d547748@cloudmailin.net"
 
   def new_ticket_notification(ticket)
     @ticket = ticket

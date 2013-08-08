@@ -1,10 +1,11 @@
 class AddReplyToTickets < ActiveRecord::Migration
   def change
     create_table :replies do |t|
-      t.string :body
-      t.integer :ticket_id
+      t.text :body
+      t.belongs_to :ticket
 
       t.timestamps
     end
+    add_index :replies, :ticket_id
   end
 end
