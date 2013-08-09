@@ -1,6 +1,6 @@
 Helpdesk::Application.configure do
 
-  config.action_mailer.smtp_settings = {
+  ActionMailer::Base.smtp_settings = {
     :address        => 'smtp.sendgrid.net',
     :port           => '587',
     :authentication => :plain,
@@ -9,6 +9,11 @@ Helpdesk::Application.configure do
     :domain         => 'heroku.com',
     :enable_starttls_auto => true
   }
+
+  ActionMailer::Base.delivery_method = :smtp
+
+  config.action_mailer.default_url_options = { :host => 'my-helpdesk.herokuapp.com/' }
+
   # Settings specified here will take precedence over those in config/application.rb
 
   # Code is not reloaded between requests
