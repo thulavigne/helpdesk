@@ -14,7 +14,7 @@
   <b>Replies:</b><br>
   <ul>
   <% @ticket.replies.each do |reply| %>
-   <li><%= reply.body %></li>
+   <li><%= reply.body %> - <%= link_to "Edit", edit_reply_path(reply) %> | <%= link_to "Delete", reply_path(reply), method: "delete", confirm: "Are you sure?" %></li>
   <% end %>
   </ul>
 </p>
