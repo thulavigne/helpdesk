@@ -12,7 +12,7 @@
 
 <p>
   <b>Replies:</b><br>
-  <% @ticket.replies.each do %>
+  <% @ticket.replies.each do |reply| %>
    <%= reply.body %> - <%= link_to "Edit", edit_reply_path(reply) %> | <%= link_to "Delete", reply_path(reply), method: "delete", confirm: "Are you sure?" %>
   <% end %>
 </p>
