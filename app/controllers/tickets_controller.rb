@@ -15,12 +15,6 @@ class TicketsController < ApplicationController
   # GET /tickets/1
   # GET /tickets/1.json
   def show
-    @ticket = Ticket.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @ticket }
-    end
   end
 
   # GET /tickets/new
@@ -36,7 +30,6 @@ class TicketsController < ApplicationController
 
   # GET /tickets/1/edit
   def edit
-    @ticket = Ticket.find(params[:id])
   end
 
   # POST /tickets
@@ -77,7 +70,6 @@ class TicketsController < ApplicationController
   # DELETE /tickets/1
   # DELETE /tickets/1.json
   def destroy
-    @ticket = Ticket.find(params[:id])
     @ticket.destroy
 
     respond_to do |format|
