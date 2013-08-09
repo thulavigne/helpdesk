@@ -83,4 +83,10 @@ class TicketsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  private
+  def find_ticket
+    @ticket = Ticket.find(params[:id])
+  end
+
 end

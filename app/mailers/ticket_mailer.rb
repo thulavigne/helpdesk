@@ -3,7 +3,7 @@ class TicketMailer < ActionMailer::Base
 
   def new_ticket_notification(ticket)
     @ticket = ticket
-    mail(to: ENV['AGENT_ADDRESS'], subject: "New Ticket: #{@ticket.title} ID: #{@ticket.id}")
+    mail to: ENV['AGENT_ADDRESS'], subject: "New Ticket: #{@ticket.title} ID: #{@ticket.id}"
   end
 
 end
