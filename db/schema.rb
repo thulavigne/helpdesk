@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(:version => 20130808055008) do
     t.datetime "updated_at", :null => false
   end
 
+  add_index "replies", ["ticket_id"], :name => "index_replies_on_ticket_id"
+
   create_table "tickets", :force => true do |t|
     t.string   "title"
     t.text     "description"
