@@ -1,4 +1,6 @@
 class TicketsController < ApplicationController
+  before_filter :find_ticket, only: [:show, :edit, :update, :destroy]
+
   # GET /tickets
   # GET /tickets.json
   def index
