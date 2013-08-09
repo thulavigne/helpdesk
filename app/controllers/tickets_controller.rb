@@ -18,7 +18,7 @@ class TicketsController < ApplicationController
   def create
     @ticket = Ticket.new(params[:ticket])
     if @ticket.save
-      AdminTicket.new_ticket(@ticket).deliver
+      TicketMailer.new_ticket_notification(@ticket).deliver
       redirect_to @ticket, notice: 'Ticket was successfully created.'
     else
       render action: "new"

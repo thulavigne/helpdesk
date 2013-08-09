@@ -47,3 +47,7 @@ Helpdesk::Application.configure do
   config.assets.debug = true
 
 end
+
+# load dotenv
+require 'dotenv'
+Dotenv.load
